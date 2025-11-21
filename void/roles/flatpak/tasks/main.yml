@@ -13,9 +13,6 @@
   become: false
   flatpak:
     name:
-      - com.heroicgameslauncher.hgl
-      - com.valvesoftware.Steam
-      - com.usebottles.bottles
       - io.github.fabrialberio.pinapp
       - com.github.tchx84.Flatseal
     state: present
