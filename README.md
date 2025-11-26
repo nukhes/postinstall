@@ -16,5 +16,6 @@ newgrp sudo
 
 Run bootstrap.sh
 ```bash
+sudo apt install -y sudo curl
 sudo bash -c "$(curl -fsSL https://raw.githubusercontent.com/nukhes/postinstall/refs/heads/main/debian/bootstrap.sh)"
 ```
