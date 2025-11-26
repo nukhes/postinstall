@@ -11,7 +11,7 @@ DOTSDIR="$USER_HOME/.dots"
 echo "[*] Updating system as root..."
 sudo apt update -y && sudo apt upgrade -y
 echo "[*] Installing base packages as root..."
-sudo apt install -y git curl wget stow python
+sudo apt install -y git curl wget stow python3 python3-pip 
 echo "[*] Installing pixi and some global packages as $REAL_USER..."
 curl -fsSL https://pixi.sh/install.sh | sh
 pixi global install eza nodejs pnpm
