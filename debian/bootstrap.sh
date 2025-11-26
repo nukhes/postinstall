@@ -8,13 +8,14 @@ EMAIL="79018158+nukhes@users.noreply.github.com"
 REPO="https://github.com/nukhes/dotfiles.git"
 DOTSDIR="$USER_HOME/.dots"
 
+echo "[*] Installing pixi and some global packages as $REAL_USER..."
+curl -fsSL https://pixi.sh/install.sh | sh
+pixi global install eza nodejs pnpm
+
 echo "[*] Updating system as root..."
 sudo apt update -y && sudo apt upgrade -y
 echo "[*] Installing base packages as root..."
 sudo apt install -y git curl wget stow python3 python3-pip 
-echo "[*] Installing pixi and some global packages as $REAL_USER..."
-curl -fsSL https://pixi.sh/install.sh | sh
-pixi global install eza nodejs pnpm
 
 echo "[*] Installing fish shell as root..."
 echo 'deb http://download.opensuse.org/repositories/shells:/fish:/release:/4/Debian_13/ /' | sudo tee /etc/apt/sources.list.d/shells:fish:release:4.list
