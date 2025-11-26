@@ -2,7 +2,19 @@
 Setup Linux for my use-case.
 
 ## Void Linux
-There is an Ansible playbook for Voidlinux.
 ```bash
 sudo bash -c "$(curl -fsSL https://raw.githubusercontent.com/nukhes/postinstall/refs/heads/main/void/bootstrap.sh)"
+```
+
+## Debian (Server Setup)
+Promote your user to sudoers.
+```bash
+su -
+usermod -aG sudo USERNAME
+newgrp sudo
+```
+
+Run bootstrap.sh
+```bash
+sudo bash -c "$(curl -fsSL https://raw.githubusercontent.com/nukhes/postinstall/refs/heads/main/debian/bootstrap.sh)"
 ```
